@@ -120,9 +120,9 @@ ul {
 
 .container {
   width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  /* margin: 0 auto; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -512,8 +512,8 @@ ul {
 
 .portfolio-section {
   box-sizing: border-box;
-  /* width: 1170px;
-  min-height: 1360px; */
+  /* width: 1170px; */
+  min-height: 1360px;
   padding-top: 94px;
   padding-bottom: 94px;
   margin-left: auto;
@@ -594,7 +594,8 @@ ul {
 .projects-section li {
   margin-left: 30px;
   margin-bottom: 30px;
-  border: 1px solid #eeeeee;
+  /* border: 1px solid #eeeeee; */
+  outline: 1px solid #eeeeee;
 }
 .container-projects {
   padding-top: 20px;
@@ -778,7 +779,7 @@ ul {
   margin-right: auto;
   margin-left: auto;
 }
-.conteiner-clients {
+.container-clients {
   max-width: 1700px;
   height: 182px;
 }
