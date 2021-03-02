@@ -1130,6 +1130,7 @@ ul {
 }
 /*форма поля ввода*/
 .modal-form {
+  /* position: relative; */
   width: 448px;
   height: 342px;
   margin-top: 12px;
@@ -1168,6 +1169,7 @@ ul {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/*выбираем на любом уровне вложености всех последующих соседей ~  */
 .modal-form-input:focus ~ .icon-form {
   fill: var(--input-focus-icon-color);
 
