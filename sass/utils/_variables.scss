@@ -9,7 +9,7 @@
   --maine-font: Roboto, sans-serif;
   --secondary-font: Raleway, sans-serif;
 
-  /*общее использует logo; hover; focus; hero-bottom */
+  /* == Общее == - использует logo; hover; focus; hero-bottom */
   --accent-color: #2196f3;
   --main-color-text: #212121;
   --second-color-text: #757575;
@@ -18,16 +18,16 @@
   --icon-link-color: #afb1b8;
   --close-color: rgba(0, 0, 0, 0.1);
 
-  /*герой*/
+  /* Студия - Hero */
   --hero-background-color: #c4c4c4;
   --hero-text-color: #fff;
   --hero-button-text-color: #ffffff;
 
-  /*модальное окно*/
+  /* Студия - Модальное окно */
   --backdrop-color: rgba(0, 0, 0, 0.5);
   --portfolio-button-bgcolor-active: #2196f3;
 
-  /*форма модального окна*/
+  /* Студия - Форма модального окна*/
   --text-lable: #757575;
   --modal-form-input-border-color: rgba(33, 33, 33, 0.2);
   --commits-placeholder: rgba(117, 117, 117, 0.5);
@@ -36,10 +36,10 @@
   --checkbox-border: #212121;
   --modal--button-hover: #188ce8;
 
-  /*наша команда*/
+  /* Студия - наша команда*/
   --social-ico-acent: #fff;
 
-  /*подвал*/
+  /* Подвал */
   --footer-bgcolor: #2f303a;
   --logo-text-color: #fff;
   --footer-text-color: #ffffff;
@@ -51,7 +51,7 @@
   --input-border: rgba(255, 255, 255, 0.3);
   --footer-input-user-text: #fff;
 
-  /*Карточка портфолио*/
+  /* Портфолио - Карточка портфолио */
   --portfolio-button-text-active-color: #fff;
   --thumb-text-color: #fff;
   --thumb-background-color: rgba(33, 150, 243, 0.9);
