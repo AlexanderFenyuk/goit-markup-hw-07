@@ -73,6 +73,8 @@
 .connect-item {
   margin-right: 10px;
 }
+
+/* == ОБЩЕЕ == Подвал - акцент ссылок - иконки соц. сетей */
 .connect-link {
   display: flex;
   align-items: center;
@@ -85,6 +87,11 @@
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    border-radius: 50%;
+    background-color: var(--accent-color);
+  }
 }
 
 /* Подвал иконка соц. сетей */
@@ -92,14 +99,6 @@
   width: 20px;
   height: 20px;
   fill: currentColor;
-}
-
-/* == ОБЩЕЕ == Подвал - акцент ссылок - иконки соц. сетей */
-.connect-link:hover,
-.connect-link:focus {
-  border-radius: 50%;
-  background-color: var(--accent-color);
-  /* outline: none; */
 }
 
 /* Подвал - Подпишитесь на рассылку  - форма для подписания */
@@ -144,9 +143,9 @@
   border-radius: 4px;
   background-color: var(--subscribe-button-color);
   box-shadow: 0px 4px 4px var(--button-shadow-box);
-}
-.subscribe-button:focus {
-  outline: 2px solid black;
+  &:focus {
+    outline: 2px solid black;
+  }
 }
 
 /* Подвал - поле заполнения */

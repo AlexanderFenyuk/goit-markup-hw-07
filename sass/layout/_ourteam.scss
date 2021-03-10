@@ -89,18 +89,19 @@
   transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Студия - Наша Команда - акцент ссылок - иконки соц. сетей */
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    color: var(--social-ico-acent);
+    /* outline: none; */
+  }
 }
+
 .svg-icon {
   width: 20px;
   height: 20px;
   fill: currentColor;
-}
-
-/* Студия - Наша Команда - акцент ссылок - иконки соц. сетей */
-.social-icon:hover,
-.social-icon:focus {
-  background-color: var(--accent-color);
-  border-radius: 50%;
-  color: var(--social-ico-acent);
-  /* outline: none; */
 }

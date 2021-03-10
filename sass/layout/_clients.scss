@@ -6,6 +6,7 @@
   margin-right: auto;
   margin-left: auto;
 }
+
 .container-clients {
   max-width: 1700px;
   height: 182px;
@@ -29,10 +30,12 @@
   margin-top: 50px;
 }
 
-.item-client-icon:not(:last-child) {
-  margin-right: 30px;
+.item-client-icon {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
-
+/* Студия - Постоянные клиенты + иконки ссылки - стили при ховере-фокусе */
 .link-icon {
   display: flex;
   align-items: center;
@@ -45,13 +48,10 @@
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Студия - Постоянные клиенты - иконки ссылки - стили при ховере-фокусе */
-.link-icon:hover,
-.link-icon:focus {
-  color: var(--accent-color);
-  /* outline: none; */
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .logo-1 {

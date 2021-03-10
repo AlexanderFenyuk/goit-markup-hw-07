@@ -13,19 +13,19 @@
   background-color: var(--hero-text-color);
 
   /*outline: 1px solid red;*/
-}
-.backdrop.is-hidden > .modal-port {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0) perspective(500px) rotateY(90deg);
-  transition: transform 750ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 40px;
+  .backdrop.is-hidden > & {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0) perspective(500px) rotateY(90deg);
+    transition: transform 750ms cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px;
 
-  width: 528px;
-  height: 581px;
-  background-color: var(--hero-text-color);
+    width: 528px;
+    height: 581px;
+    background-color: var(--hero-text-color);
+  }
 }
 
 /* Модальное окно - иконка закрытия круг*/
@@ -54,10 +54,10 @@
   height: 12px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /*outline: 1px solid red;*/
-}
-.round:hover > .close-icon {
-  fill: var(--accent-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .round:hover > & {
+    fill: var(--accent-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 /* Модальное окно - Оглавление формы */
@@ -89,17 +89,27 @@
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-form-input:focus {
-  outline: none;
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
-  padding-left: 42px;
+  &:focus {
+    outline: none;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    padding-left: 42px;
 
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Модальное окно - выбираем на любом уровне вложености всех последующих соседей ~  */
+  &:focus ~ .icon-form {
+    fill: var(--input-focus-icon-color);
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
+
 .icon-form {
   position: absolute;
   left: 15px;
@@ -113,14 +123,6 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Модальное окно - выбираем на любом уровне вложености всех последующих соседей ~  */
-.modal-form-input:focus ~ .icon-form {
-  fill: var(--input-focus-icon-color);
-
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 /* Модальное окно - поле коментариев*/
 .commits {
   width: 448px;
@@ -134,32 +136,33 @@
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    width: 448px;
+    height: 120px;
+    resize: none;
+    padding: 12px 16px;
+    margin-top: 4px;
+    border-radius: 4px;
+    border: 1px solid var(--accent-color);
+    outline: none;
+
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &::placeholder {
+    font-family: var(--maine-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.166;
+    letter-spacing: 0.01em;
+
+    color: var(--commits-placeholder);
+  }
 }
 
-.commits:focus {
-  width: 448px;
-  height: 120px;
-  resize: none;
-  padding: 12px 16px;
-  margin-top: 4px;
-  border-radius: 4px;
-  border: 1px solid var(--accent-color);
-  outline: none;
-
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.commits::placeholder {
-  font-family: var(--maine-font);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 1.166;
-  letter-spacing: 0.01em;
-
-  color: var(--commits-placeholder);
-}
 /* Модальное окно - подписи полей ввода */
 .text-lable {
   font-family: var(--maine-font);
@@ -188,21 +191,23 @@
   width: 448px;
   height: 24px;
   margin: 20px auto 0;
-}
-.contract input[type="checkbox"] {
-  /* скрываем элемент */
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
 
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  & input[type="checkbox"] {
+    /* скрываем элемент */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }
+
 .contract-checkbox {
   position: absolute;
   top: 50%;
@@ -252,6 +257,7 @@
 
   color: var(--text-lable);
 }
+
 .contract-link {
   font-family: var(--maine-font);
   font-style: normal;
@@ -262,10 +268,11 @@
 
   letter-spacing: 0.03em;
   text-decoration: underline;
+  &:focus {
+    outline: 2px solid black;
+  }
 }
-.contract-link:focus {
-  outline: 2px solid black;
-}
+
 /* Студия - Модальное окно - кнопка модалки */
 .modal-button {
   display: flex;
@@ -284,25 +291,26 @@
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    display: flex;
+    align-items: center;
+
+    width: 200px;
+    height: 50px;
+    margin: 30px auto 0 auto;
+    padding: 0;
+
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--modal--button-hover);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
-.modal-button:hover {
-  display: flex;
-  align-items: center;
 
-  width: 200px;
-  height: 50px;
-  margin: 30px auto 0 auto;
-  padding: 0;
-
-  border: 0;
-  border-radius: 4px;
-  background-color: var(--modal--button-hover);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 .modal-button-text {
   margin-left: auto;
   margin-right: auto;
