@@ -2,7 +2,8 @@
 * *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 :root {
@@ -60,7 +61,8 @@
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -147,9 +149,14 @@ ul {
 }
 
 .header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #fff;
 }
 
@@ -173,6 +180,7 @@ ul {
   font-size: 14px;
   line-height: 16px;
   color: var(--accent-color);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -194,6 +202,7 @@ ul {
   font-size: 14px;
   line-height: 16px;
   color: var(--accent-color);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -234,6 +243,8 @@ ul {
   font-size: 14px;
   line-height: 1.142;
   padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -256,7 +267,8 @@ ul {
   position: absolute;
   left: 0;
   bottom: 0;
-  transform: translateY(1px);
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
   display: block;
   width: 100%;
   height: 4px;
@@ -270,8 +282,12 @@ ul {
   position: absolute;
   left: 0;
   bottom: 0;
-  transform: translateY(1px) scaleX(0);
+  -webkit-transform: translateY(1px) scaleX(0);
+          transform: translateY(1px) scaleX(0);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
   width: 100%;
   height: 4px;
@@ -280,7 +296,8 @@ ul {
 }
 
 .navigation-link:hover::after, .navigation-link:focus::after {
-  transform: translateY(1px) scaleX(1);
+  -webkit-transform: translateY(1px) scaleX(1);
+          transform: translateY(1px) scaleX(1);
 }
 
 .navigation-link:hover, .navigation-link:focus {
@@ -307,12 +324,14 @@ ul {
 
 /* Студия - hero */
 .hero {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   text-align: center;
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -341,16 +360,23 @@ ul {
 
 /* Студия - кнопка для  hero - главная страница  */
 .hero-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 0;
   width: 200px;
   min-height: 50px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
   background-color: var(--accent-color);
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: auto;
   margin-right: auto;
   color: var(--hero-button-text-color);
@@ -370,6 +396,8 @@ ul {
 }
 
 .features-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -406,9 +434,15 @@ ul {
 }
 
 .features-icon-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 120px;
   border: none;
   border-radius: 4px;
@@ -436,6 +470,8 @@ ul {
 }
 
 .whatwedo-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 50px;
 }
@@ -449,9 +485,15 @@ ul {
 
 .whatwedo-label {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   bottom: 0;
   width: 370px;
   height: 70px;
@@ -487,17 +529,25 @@ ul {
 }
 
 .ourteam-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 50px;
 }
 
 .container-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 270px;
   height: 428px;
   background-color: #fff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -535,18 +585,30 @@ ul {
 
 /* Студия - Наша команда SVG */
 .card-social-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 206px;
   height: 44px;
   margin: 0 auto 0 auto;
 }
 
 .item-social-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 44px;
   height: 44px;
   margin-right: 10px;
@@ -560,9 +622,12 @@ ul {
   background-color: transparent;
   border-radius: 50%;
   color: var(--social-icon);
+  -webkit-transition-property: background-color, color;
   transition-property: background-color, color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   /* Студия - Наша Команда - акцент ссылок - иконки соц. сетей */
 }
 
@@ -605,6 +670,8 @@ ul {
 }
 
 .list-client-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 170px;
   height: 90px;
@@ -617,17 +684,26 @@ ul {
 
 /* Студия - Постоянные клиенты + иконки ссылки - стили при ховере-фокусе */
 .link-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 170px;
   height: 90px;
   color: var(--icon-link-color);
   border: 1px solid;
   border-radius: 4px;
+  -webkit-transition-property: color;
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-icon:hover, .link-icon:focus {
@@ -725,6 +801,8 @@ ul {
 }
 
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -745,9 +823,15 @@ ul {
 }
 
 .connect-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 20px;
 }
 
@@ -757,17 +841,26 @@ ul {
 
 /* == ОБЩЕЕ == Подвал - акцент ссылок - иконки соц. сетей */
 .connect-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: var(--logo-text-color-10p);
   color: var(--logo-text-color);
+  -webkit-transition-property: background-color;
   transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .connect-link:hover, .connect-link:focus {
@@ -806,13 +899,19 @@ ul {
 
 /* Подвал - форма заполнения */
 .subscribe-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 /* Подвал - кнопка отправить */
 .subscribe-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 200px;
   height: 50px;
   margin-top: 20px;
@@ -822,7 +921,8 @@ ul {
   border: none;
   border-radius: 4px;
   background-color: var(--subscribe-button-color);
-  box-shadow: 0px 4px 4px var(--button-shadow-box);
+  -webkit-box-shadow: 0px 4px 4px var(--button-shadow-box);
+          box-shadow: 0px 4px 4px var(--button-shadow-box);
 }
 
 .subscribe-button:focus {
@@ -875,7 +975,9 @@ ul {
   width: 100%;
   height: 100%;
   opacity: 1;
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   background-color: var(--backdrop-color);
   /*скрытие фона модального окна*/
@@ -884,8 +986,12 @@ ul {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  transform: scale(0);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: opacity 750ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 750ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1), opacity 750ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1), opacity 750ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*===========   М О Д А Л Ь Н О Е   О К Н О   ===============*/
@@ -893,8 +999,12 @@ ul {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1) perspective(500px) rotateY(0deg);
+  -webkit-transform: translate(-50%, -50%) scale(1) perspective(500px) rotateY(0deg);
+          transform: translate(-50%, -50%) scale(1) perspective(500px) rotateY(0deg);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 750ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 750ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 750ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 750ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 750ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
   width: 528px;
   height: 581px;
@@ -906,8 +1016,12 @@ ul {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0) perspective(500px) rotateY(90deg);
+  -webkit-transform: translate(-50%, -50%) scale(0) perspective(500px) rotateY(90deg);
+          transform: translate(-50%, -50%) scale(0) perspective(500px) rotateY(90deg);
+  -webkit-transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 750ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 750ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 750ms cubic-bezier(0.4, 0, 0.2, 1), opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 750ms cubic-bezier(0.4, 0, 0.2, 1), opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 750ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
   width: 528px;
   height: 581px;
@@ -925,9 +1039,15 @@ ul {
   border: 1px solid var(--close-color);
   border-radius: 50%;
   background-color: var(--logo-text-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   /*outline: 1px solid red;*/
 }
 
@@ -935,12 +1055,14 @@ ul {
 .close-icon {
   width: 12px;
   height: 12px;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /*outline: 1px solid red;*/
 }
 
 .round:hover > .close-icon {
   fill: var(--accent-color);
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -972,9 +1094,12 @@ ul {
   border-radius: 4px;
   border: 1px solid var(--modal-form-input-border-color);
   padding: 11px 11px 11px 42px;
+  -webkit-transition-property: border-color;
   transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   /* Модальное окно - выбираем на любом уровне вложености всех последующих соседей ~  */
 }
 
@@ -983,16 +1108,22 @@ ul {
   border: 1px solid var(--accent-color);
   border-radius: 4px;
   padding-left: 42px;
+  -webkit-transition-property: border-color;
   transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-input:focus ~ .icon-form {
   fill: var(--input-focus-icon-color);
+  -webkit-transition-property: fill;
   transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-form {
@@ -1002,9 +1133,12 @@ ul {
   width: 18px;
   height: 18px;
   fill: var(--input-icon-color);
+  -webkit-transition-property: fill;
   transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Модальное окно - поле коментариев*/
@@ -1016,9 +1150,12 @@ ul {
   margin-top: 4px;
   border-radius: 4px;
   border: 1px solid var(--modal-form-input-border-color);
+  -webkit-transition-property: border-color;
   transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .commits:focus {
@@ -1030,9 +1167,42 @@ ul {
   border-radius: 4px;
   border: 1px solid var(--accent-color);
   outline: none;
+  -webkit-transition-property: border-color;
   transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.commits::-webkit-input-placeholder {
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+  color: var(--commits-placeholder);
+}
+
+.commits:-ms-input-placeholder {
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+  color: var(--commits-placeholder);
+}
+
+.commits::-ms-input-placeholder {
+  font-family: var(--maine-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+  color: var(--commits-placeholder);
 }
 
 .commits::placeholder {
@@ -1085,7 +1255,8 @@ ul {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -1094,12 +1265,14 @@ ul {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 16px;
   height: 15px;
   background-color: #fff;
   border: 2px solid var(--checkbox-border);
   border-radius: 2px;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1107,7 +1280,8 @@ ul {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 16px;
   height: 15px;
   background-image: url("../images/icon-check.svg");
@@ -1116,6 +1290,7 @@ ul {
   background-color: var(--accent-color);
   border: 2px solid transparent;
   border-radius: 2px;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1148,8 +1323,12 @@ ul {
 
 /* Студия - Модальное окно - кнопка модалки */
 .modal-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 200px;
   height: 50px;
   margin: 30px auto 0 auto;
@@ -1157,15 +1336,23 @@ ul {
   border: 0;
   border-radius: 4px;
   background-color: var(--portfolio-button-bgcolor-active);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  -webkit-transition-property: background-color;
   transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-button:hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 200px;
   height: 50px;
   margin: 30px auto 0 auto;
@@ -1173,10 +1360,14 @@ ul {
   border: 0;
   border-radius: 4px;
   background-color: var(--modal--button-hover);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  -webkit-transition-property: background-color;
   transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-button-text {
